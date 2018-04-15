@@ -1,0 +1,29 @@
+body {
+
+  background: linear-gradient(blue, darkblue);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.push-right {
+  padding-right: 70%;
+}
+
+#question-box {
+  background-color: #0F5257;
+  color: #D6D3F0;
+
+  border: #0F5257 1px solid;
+  border-radius: 15px;
+}
+
+.answer {
+
+  background-color: #9C92A3;
+  color: #D6D3F0;
+
+  border: #9C92A3 1px solid;
+  border-radius: 15px;
+
+  margin: 10px 10px 10px 10px;
+}

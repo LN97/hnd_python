@@ -1,0 +1,57 @@
+{% extends 'default/master.html' %}
+
+{% block body %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2 push-right">
+      <h3>Question #{{question.id}}</h3>
+    </div>
+    <div class="col-2">
+      <h3>
+        {% if score %}
+          {{ score }} points
+        {% endif %}
+      </h3>
+    </div>
+  </div>
+  <div class="row">
+    <div id='b' class="col-5"></div>
+    <div id="question-box" class="col-2">
+      <h1>Question</h1>
+      {% if question %}
+      <p id="question" data-id="{{question.id}}"> {{ question.body }}<p>
+      {% endif %}
+    </div>
+    <div id='b' class="col-5"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-4"></div>
+    {% if answers[0] %}
+    <div id="answer-1" class="col-2 answer" data-id="{{answers[0].id}}">
+        <h2>{{answers[0].body }}</h2>
+    </div>
+    {% endif %}
+    {% if answers[1] %}
+    <div id="answer-2" class="col-2 answer" data-id="{{answers[1].id}}">
+      <h2>{{answers[1].body }}</h2>
+    </div>
+    {% endif %}
+    <div class="col-4"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-4"></div>
+    {% if answers[2] %}
+      <div class="col-2 answer" data-id="{{answers[2].id}}">
+        <h2>{{answers[2].body }}</h2>
+      </div>
+    {% endif %}
+    {% if answers[3] %}
+    <div class="col-2 answer" data-id="{{answers[3].id}}">
+      <h2>{{answers[3].body }}</h2>
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock %}
